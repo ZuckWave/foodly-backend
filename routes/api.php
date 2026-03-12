@@ -11,8 +11,8 @@ Route::post('/login',    [AuthController::class, 'login']);
 
 // Public - lihat resep
 Route::get('/recipes',          [RecipeController::class, 'index']);
-Route::get('/recipes/top/best', [RecipeController::class, 'topRecipes']); // ← static first
-Route::get('/recipes/{id}',     [RecipeController::class, 'show']);       // ← dynamic after
+Route::get('/recipes/top/best', [RecipeController::class, 'topRecipes']); 
+Route::get('/recipes/{id}',     [RecipeController::class, 'show']);       
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function () {
