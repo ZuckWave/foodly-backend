@@ -27,5 +27,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/recipes/{id}', [RecipeController::class, 'destroy']);
 
     // Like
-    Route::post('/recipes/{id}/like', [LikeController::class, 'toggle']);
+    Route::get('/likes',                  [LikeController::class, 'favorites']);
+    Route::post('/recipes/{id}/like',     [LikeController::class, 'toggle']);
 });
