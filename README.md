@@ -1,59 +1,229 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 🍽️ Foodly Backend
 
-## About Laravel
+**REST API Backend untuk aplikasi pemesanan makanan berbasis Laravel**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![Sanctum](https://img.shields.io/badge/Laravel_Sanctum-4.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/docs/sanctum)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📋 Tentang Proyek
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Foodly Backend** adalah REST API yang dibangun menggunakan [Laravel 12](https://laravel.com) sebagai fondasi backend untuk aplikasi pemesanan makanan **Foodly**. API ini menyediakan layanan autentikasi, manajemen data makanan, dan fitur-fitur inti lainnya yang dikonsumsi oleh aplikasi klien (mobile/web).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Autentikasi dikelola menggunakan **Laravel Sanctum**, memastikan setiap request API aman dan terverifikasi.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✨ Fitur Utama
 
-### Premium Partners
+- 🔐 **Autentikasi** – Login, register, dan logout via token menggunakan Laravel Sanctum
+- 🍕 **Manajemen Menu** – CRUD data makanan dan kategori
+- 📦 **Manajemen Pesanan** – Pemrosesan dan pelacakan status pesanan
+- 🧪 **Testing** – Unit & feature testing menggunakan PestPHP
+- 🗄️ **Database Migration** – Skema database terstruktur dengan migration dan seeder
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🛠️ Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Teknologi | Versi | Fungsi |
+|-----------|-------|--------|
+| PHP | ^8.2 | Bahasa pemrograman utama |
+| Laravel | ^12.0 | Framework backend |
+| Laravel Sanctum | ^4.0 | Autentikasi API berbasis token |
+| PestPHP | ^4.4 | Framework testing |
+| Vite | latest | Asset bundler |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📦 Prasyarat
 
-## Security Vulnerabilities
+Sebelum menjalankan proyek ini, pastikan kamu sudah menginstal:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **PHP** >= 8.2
+- **Composer** >= 2.x
+- **Node.js** >= 18.x & **npm**
+- **MySQL** / **PostgreSQL** / **SQLite**
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 Instalasi
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/ZuckWave/foodly-backend.git
+cd foodly-backend
+```
+
+### 2. Setup Otomatis (Direkomendasikan)
+
+Proyek ini menyediakan script setup otomatis:
+
+```bash
+composer run setup
+```
+
+Script ini akan secara otomatis:
+- Menginstal semua dependency PHP (`composer install`)
+- Menyalin `.env.example` ke `.env`
+- Generate application key
+- Menjalankan database migration
+- Menginstal dependency Node.js (`npm install`)
+- Build asset frontend (`npm run build`)
+
+### 3. Setup Manual (Opsional)
+
+Jika ingin melakukan setup secara manual, ikuti langkah berikut:
+
+```bash
+# Install dependency PHP
+composer install
+
+# Salin file environment
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+
+# Konfigurasi database di file .env, lalu jalankan migration
+php artisan migrate
+
+# Install dependency Node & build asset
+npm install
+npm run build
+```
+
+---
+
+## ⚙️ Konfigurasi Environment
+
+Edit file `.env` dan sesuaikan konfigurasi berikut:
+
+```env
+APP_NAME=Foodly
+APP_ENV=local
+APP_KEY=          # Auto-generated
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=foodly
+DB_USERNAME=root
+DB_PASSWORD=
+
+# Sanctum
+SANCTUM_STATEFUL_DOMAINS=localhost,127.0.0.1
+```
+
+---
+
+## ▶️ Menjalankan Aplikasi
+
+### Development Mode
+
+Jalankan semua service sekaligus (server, queue, dan Vite):
+
+```bash
+composer run dev
+```
+
+Atau jalankan hanya server Laravel:
+
+```bash
+php artisan serve
+```
+
+API akan tersedia di: `http://localhost:8000`
+
+---
+
+## 🧪 Testing
+
+```bash
+# Jalankan semua test
+composer run test
+
+# Atau langsung via artisan
+php artisan test
+
+# Jalankan dengan coverage
+php artisan test --coverage
+```
+
+---
+
+## 📁 Struktur Proyek
+
+```
+foodly-backend/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/    # Controller API
+│   │   └── Middleware/     # Middleware kustom
+│   └── Models/             # Eloquent Models
+├── bootstrap/              # Bootstrap aplikasi
+├── config/                 # Konfigurasi aplikasi
+├── database/
+│   ├── factories/          # Model factories untuk testing
+│   ├── migrations/         # Skema database
+│   └── seeders/            # Data awal database
+├── public/                 # Entry point & asset publik
+├── resources/              # Views & raw assets
+├── routes/
+│   ├── api.php             # Definisi route API
+│   └── web.php             # Definisi route web
+├── storage/                # File yang di-generate aplikasi
+├── tests/                  # Unit & feature tests
+├── .env.example            # Template environment
+└── composer.json           # Dependency PHP
+```
+
+---
+
+## 📡 API Endpoints
+
+> Base URL: `http://localhost:8000/api`
+
+Autentikasi menggunakan **Bearer Token** via Laravel Sanctum. Sertakan header berikut pada setiap request yang memerlukan autentikasi:
+
+```
+Authorization: Bearer {your_token}
+```
+
+_Dokumentasi lengkap endpoint API akan segera ditambahkan._
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat welcome! Ikuti langkah berikut:
+
+1. **Fork** repository ini
+2. Buat branch fitur baru: `git checkout -b feature/nama-fitur`
+3. Commit perubahan: `git commit -m 'feat: menambahkan fitur X'`
+4. Push ke branch: `git push origin feature/nama-fitur`
+5. Buat **Pull Request**
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+<div align="center">
+
+Dibuat dengan ❤️ menggunakan [Laravel](https://laravel.com)
+
+</div>
